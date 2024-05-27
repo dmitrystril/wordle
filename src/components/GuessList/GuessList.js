@@ -5,7 +5,7 @@ import Guess from "../Guess";
 import { NUM_OF_GUESSES_ALLOWED } from "../../constants";
 import { range } from "../../utils";
 
-function GuessList({ guessList }) {
+function GuessList({ guessList, answer }) {
   const guessListIndexes = range(0, NUM_OF_GUESSES_ALLOWED);
 
   return (
@@ -16,7 +16,7 @@ function GuessList({ guessList }) {
         const id = guessItem?.id || index;
         const word = guessItem?.guess || null;
 
-        return <Guess key={id} guess={word} />;
+        return <Guess key={id} guess={word} answer={answer} />;
       })}
     </div>
   );

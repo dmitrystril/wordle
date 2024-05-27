@@ -16,7 +16,7 @@ function Game() {
 
   return (
     <>
-      <GuessList guessList={guessList} />
+      <GuessList guessList={guessList} answer={answer} />
 
       <GuessForm
         addGuessToList={(guess) => setGuessList([...guessList, guess])}
