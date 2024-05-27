@@ -2,7 +2,7 @@ import React from "react";
 
 import { MAX_WORD_LENGTH } from "../../constants";
 
-function GuessForm({ addGuessToList }) {
+function GuessForm({ addGuessToList, disabled }) {
   const [guess, setGuess] = React.useState("");
 
   const handleSubmit = (event) => {
@@ -26,6 +26,7 @@ function GuessForm({ addGuessToList }) {
         required={true}
         value={guess}
         onChange={(event) => setGuess(event.target.value.toUpperCase())}
+        disabled={disabled}
       />
     </form>
   );
